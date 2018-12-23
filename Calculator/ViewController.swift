@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        _ = Calculator.transformtTo(calCode: "9+(3-1)*3+10/2")
         setupUI()
     }
     

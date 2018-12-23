@@ -15,13 +15,60 @@ class Calculator: NSObject {
     static func transformtTo(calCode: String) -> String {
         let mathChars = ["+", "-", "*", "/", "(", ")"]
         let stack = Stack()
-        var formuStr: [String] = []
+        var formuStr: [String] = [calCode]
         
+        // 根据计算符号分割表达式
         for mathMethod in mathChars {
-            formuStr = calCode.components(separatedBy: mathMethod)
+            var cacheArray: [String] = []
+            
+            for codeStr in formuStr {
+                let array = codeStr.components(separatedBy: mathMethod)
+                var mutableArray: [String] = []
+                for str in array {
+                    mutableArray.append(contentsOf: [str, mathMethod])
+                }
+                mutableArray.removeLast()
+                
+                cacheArray.append(contentsOf: mutableArray)
+            }
+            
+            print(cacheArray)
+            formuStr = cacheArray
         }
         
-        return formuStr
+        print(formuStr)
+        
+        print(deleteEmpty(array: formuStr))
+        
+        return ""
     }
+    
+    // 递归删除多余空字段
+    static func deleteEmpty(array: [String]) -> [String] {
+        var array = array
+        var isFinish = true
+        
+        var resultArray: [String] = []
+        
+        for (index, str) in array.enumerated() {
+            if str == "" {
+                array.remove(at: index)
+                isFinish = false
+                break
+            }
+        }
+        
+        resultArray = array
+        
+        if isFinish == false {
+            return deleteEmpty(array: resultArray)
+        } else {
+            return resultArray
+        }
+    }
+    
+//    func transformt(codes: [String]) -> [String] {
+//        
+//    }
     
 }

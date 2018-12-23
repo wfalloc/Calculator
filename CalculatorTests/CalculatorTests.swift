@@ -21,8 +21,9 @@ class CalculatorTests: XCTestCase {
         super.tearDown()
     }
     
-    func testCalculator() {
-        
+    func testDeleteEmpty() {
+        let resultArray = Calculator.deleteEmpty(array: ["9", "+", "", "(", "3", "-", "1", ")", "", "*", "3", "+", "10", "/", "2"])
+        assert(resultArray == ["9", "+", "(", "3", "-", "1", ")", "*", "3", "+", "10", "/", "2"], "删除空元素错误")
     }
     
     func testPerformanceExample() {

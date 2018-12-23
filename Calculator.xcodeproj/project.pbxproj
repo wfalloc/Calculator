@@ -202,6 +202,7 @@
 				TargetAttributes = {
 					B86894211F720E9E00FE11CD = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = J94PW3DBCZ;
 						ProvisioningStyle = Automatic;
 					};
 					B86894351F720E9E00FE11CD = {
@@ -426,8 +427,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J94PW3DBCZ;
 				INFOPLIST_FILE = Calculator/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wufan.Calculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -439,8 +441,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J94PW3DBCZ;
 				INFOPLIST_FILE = Calculator/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wufan.Calculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
